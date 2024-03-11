@@ -1,4 +1,4 @@
-package sec04;
+package print;
 
 public class Print01 {
 	public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class Print01 {
 		System.out.println("이름 : " + name);
 		System.out.println("나이 : " + age);
 		System.out.println();
-		
+
 		System.out.print("이름 : " + name);
 		System.out.println(" 나이 : " + age);
 	}
