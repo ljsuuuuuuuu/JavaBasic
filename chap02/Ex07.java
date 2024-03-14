@@ -7,11 +7,8 @@ public class Ex07 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 입력 : ");
 		int num = sc.nextInt();
-		System.out.print("num % 4 == 0 ");
-		System.out.println(num % 4 == 0);
-		System.out.print("num % 5 == 0 ");
-		System.out.println(num % 5 == 0);
-		System.out.print("num % 4 == 0 && num % 5 == 0 ");
 		System.out.println(num % 4 == 0 && num % 5 == 0);
+		System.out.println(num % 4 == 0 || num % 5 == 0);
+		System.out.println((num % 4 == 0 || num % 5 == 0) && (num % 4 == 0 && num % 5 == 0));
 	}
 }
