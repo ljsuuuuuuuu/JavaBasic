@@ -16,7 +16,7 @@ public class Max01 {
 	
 	public static boolean inputNum() throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("숫자3개 입력(숫자 3개 모두 0 입력시 종료) : ");
+		System.out.print("숫자3개 입력(숫자 3개 모두 한줄에 입력. 숫자 3개 모두 0 입력시 종료) : ");
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		int num1 = Integer.parseInt(st.nextToken());
 		int num2 = Integer.parseInt(st.nextToken());
