@@ -69,19 +69,24 @@ public class SuBookMarket {
 	}
 
 	private static void printCart() {
+		String bookListStrart = ">> 도서 목록\r\n"
+				+ "------------------------------------------------------------------------\r\n";
+		String bookListEnd = "------------------------------------------------------------------------\n";
+		System.out.print(bookListStrart);
 		for(int i = 0; i < cartList.length; i += 1) {
 			if(cartList[i] != 0) {
 				System.out.print(cartList[i] + "권" + " ");
 				printSelBookNum(i);
 			}
 		}
+		System.out.print(bookListEnd);
 	}
 
 	private static boolean cartEmpty() {
 		if(numCartItem != 0) {
 			return false;
 		}
-		System.out.println("장바구니가 비어있습니다");
+		System.out.println(">> 장바구니가 비어 있습니다.");
 		return true;
 	}
 
@@ -103,11 +108,11 @@ public class SuBookMarket {
 				if (bookId.equals(bookList[i][0])) {
 					cartList[i] += 1;
 					numCartItem += 1;
-					System.out.println("장바구니에 정상적으로 추가 되었습니다");
+					System.out.printf(">> 장바구니 추가 : %s\n", bookList[i][1]);
 				}
 			}
 			if(numCartItem - count == 0) {
-				System.out.println("잘못된 ID.");
+				System.out.println(">> 없는 ID입니다. 도서 목록에 있는 ID를 입력하세요.");
 			}
 		} while (!bookId.equals("0"));
 
@@ -124,11 +129,11 @@ public class SuBookMarket {
 			cartList[i] = 0;
 		}
 		numCartItem = 0;
-		System.out.println("장바구니가 정상적으로 비워졌습니다");
+		System.out.println(">> 장바구니에 있는 아이템을 모두 삭제하였습니다.");
 	}
 
 	private static void menuExit() {
-		System.out.println("0");
+		System.out.println(">> LJSuuuuu Book Market을 종료합니다.");
 	}
 
 	private static void printBookList() {
@@ -153,7 +158,7 @@ public class SuBookMarket {
 
 
 	private static void menuWrongNumber() {
-		System.out.printf("없는 메뉴. 0부터 %d까지의 숫자를 입력하세요.\n", MENU_LAST_NUMBER);
+		System.out.printf("없는 메뉴입니다. 0번부터 %d번까지의 메뉴 중에서 선택하세요.\n", MENU_LAST_NUMBER);
 	}
 
 }
